@@ -7,43 +7,67 @@ public class Reader {
     String surName;
     int theNumberOfYourLibraryCard;
     String faculty;
-    char dateBirthday;
-    double phoneNumbers;
+    String dateBirthday;
+    String phoneNumbers;
 
-    public Reader(String name, String surName, int theNumberOfYourLibraryCard, String faculty, char dateBirthday, double phoneNumbers) {
+    public Reader(String name, String surName, int theNumberOfYourLibraryCard, String faculty, String dateBirthday, String phoneNumbers) {
         this.name = name;
         this.surName = surName;
         this.theNumberOfYourLibraryCard = theNumberOfYourLibraryCard;
+        this.faculty = faculty;
         this.dateBirthday = dateBirthday;
         this.phoneNumbers = phoneNumbers;
     }
-    public Reader(){}
+
+    public Reader() {
+    }
 
     public void takeBook() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Введите сколько книг хотите взять: ");
-        int quantityBook = sc.nextInt();
-        System.out.println("Петров В. В. взял " + quantityBook + "книги");
+        int takeBook = 3;
+        System.out.println("\nПетров В. В. взял " + takeBook + " книг/и/у");
     }
 
-public String takeBook(String book){
-        Scanner sc =new Scanner(System.in);
-        book= sc.nextLine();
-        if(book.equals("все")){
+    public void takeBook(String str) {
 
+        String[] objArray = new String[3];
+        objArray[0] = new String("Приключения, ");
+        objArray[1] = new String("Словарь, ");
+        objArray[2] = new String("Энциклопедия");
+        System.out.print("\nПетров В. В. взял кнги: ");
+        for (int i = 0; i < 3; i++) {
+
+            System.out.print(","+objArray[i]);
         }
-        return
-}
 
-    @Override
-    public String toString() {
-        return "Reader{" +
-                "name='" + name + '\'' +
-                ", surName='" + surName + '\'' +
-                ", theNumberOfYourLibraryCard=" + theNumberOfYourLibraryCard +
-                ", faculty='" + faculty + '\'' +
-                ", dateBirthday=" + dateBirthday +
-                ", phoneNumbers=" + phoneNumbers +
-                '}';
     }
-}
+
+    public void returnBook() {
+        int returnBook = 3;
+        System.out.println("\n\nПетров В. В. вернул " + returnBook + " книг/и/у");
+    }
+
+    public void returnBook(String str) {
+
+        String[] objArray = new String[3];
+        objArray[0] = new String("Приключения, ");
+        objArray[1] = new String("Словарь, ");
+        objArray[2] = new String("Энциклопедия");
+        System.out.print("\nПетров В. В. взял кнги: ");
+        for (int i = 0; i < 3; i++) {
+
+            System.out.print(objArray[i]);
+        }
+    }
+
+        @Override
+        public String toString () {
+            return
+                    "\n{name = '" + name + '\'' +
+                    ", surName = '" + surName + '\'' +
+                    ", theNumberOfYourLibraryCard = " + theNumberOfYourLibraryCard +
+                    ", faculty = '" + faculty + '\'' +
+                    ", dateBirthday = " + dateBirthday +
+                    ", phoneNumbers = " + phoneNumbers+"}";
+        }
+    }
+
