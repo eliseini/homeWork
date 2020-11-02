@@ -24,7 +24,7 @@ public class Reader {
 
     public void takeBook() {
         int takeBook = 3;
-        System.out.println("\nПетров В. В. взял " + takeBook + " книг/и/у");
+        System.out.println("\n" + name+" " +surName+ " взял " + takeBook + " книг/и/у");
     }
 
     public void takeBook(String str) {
@@ -43,7 +43,7 @@ public class Reader {
 
     public void returnBook() {
         int returnBook = 3;
-        System.out.println("\n\nПетров В. В. вернул " + returnBook + " книг/и/у");
+        System.out.println("\n" + name+" " +surName+ " взял " + returnBook + " книг/и/у");
     }
 
     public void returnBook(String str) {
