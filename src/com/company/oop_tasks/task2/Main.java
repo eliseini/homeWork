@@ -23,13 +23,13 @@ public class Main {
 
         Matrix matrix1 = new Matrix(elem1);
         Matrix matrix2 = new Matrix(elem2);
-        System.out.println("\n"+elem1);// дает ссылку
-        System.out.println("\n"+elem2);// дает ссылку
+        System.out.println("\nМатрица 1 "+matrix1);
+        System.out.println("\nМатрица 2 "+matrix2);
         Matrix res = matrix1.sum(matrix2);
-        System.out.println("\n"+res);
+        System.out.println("\nСумма матриц "+res);
         Matrix res1 = matrix1.proizhvedenie(matrix2);
-        System.out.println("\n"+res1);
-        System.out.println("Введите число: ");
+        System.out.println("\nУмножение матриц "+res1);
+        System.out.println("Введите число, на которое умножится матрица: ");
         Matrix res2 = matrix1.proizhvedenieNumbers(matrix2);
 
         System.out.println("\n"+res2);

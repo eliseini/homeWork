@@ -1,6 +1,7 @@
 package com.company.oop_tasks.task2;
 
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicStampedReference;
 
 //1) двумерный массив вещественных чисел;
 //2) количество строк и столбцов в матрице.
@@ -82,4 +83,6 @@ public class Matrix {
         }
         return "Matrix\n{" + e +"}";
     }
-}
+
+    }
+
