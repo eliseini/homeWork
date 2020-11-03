@@ -24,7 +24,7 @@ public class Reader {
 
     public void takeBook() {
         int takeBook = 3;
-        System.out.println("\n" + name+" " +surName+ " взял " + takeBook + " книг/и/у");
+        System.out.println("\n" + name+" " +surName+ " взял " + takeBook + " книги");
     }
 
     public void takeBook(String str) {
@@ -33,17 +33,17 @@ public class Reader {
         objArray[0] = new String("Приключения, ");
         objArray[1] = new String("Словарь, ");
         objArray[2] = new String("Энциклопедия");
-        System.out.print("\nПетров В. В. взял кнги: ");
+        System.out.print("\n" + name+" " +surName+ " взял кнги: ");
         for (int i = 0; i < 3; i++) {
 
-            System.out.print(","+objArray[i]);
+            System.out.print(objArray[i]);
         }
 
     }
 
     public void returnBook() {
         int returnBook = 3;
-        System.out.println("\n" + name+" " +surName+ " взял " + returnBook + " книг/и/у");
+        System.out.println("\n\n" + name+" " +surName+ " вернул " + returnBook + " книги");
     }
 
     public void returnBook(String str) {
@@ -52,7 +52,7 @@ public class Reader {
         objArray[0] = new String("Приключения, ");
         objArray[1] = new String("Словарь, ");
         objArray[2] = new String("Энциклопедия");
-        System.out.print("\nПетров В. В. взял кнги: ");
+        System.out.print("\n" + name+" " +surName+ " вернул кнги: ");
         for (int i = 0; i < 3; i++) {
 
             System.out.print(objArray[i]);
