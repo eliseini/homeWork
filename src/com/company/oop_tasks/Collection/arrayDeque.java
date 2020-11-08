@@ -6,21 +6,21 @@ import java.util.*;
 public class arrayDeque {
     public static void main(String[] args) {
         // //10
-        //       ArrayDeque<String> color=new ArrayDeque<>();
-//        color.add("White");
-//        color.add("Black");
-//        color.add("Yellow");
-//        color.add("Brown");
-//        color.add("Blue");
-//        System.out.println(color);
-//        Iterator<String> iteratorColor= color.iterator();
-//        while(iteratorColor.hasNext()){
-//            System.out.println(iteratorColor.next());
-//        }
-//        System.out.println("\n-");
-//        for(String colors: color){
-//            System.out.println(colors);
-//        }
+               ArrayDeque<String> color=new ArrayDeque<>();
+        color.add("White");
+        color.add("Black");
+        color.add("Yellow");
+        color.add("Brown");
+        color.add("Blue");
+        System.out.println(color);
+        Iterator<String> iteratorColor= color.iterator();
+        while(iteratorColor.hasNext()){
+            System.out.println(iteratorColor.next());
+        }
+        System.out.println("\n-");
+        for(String colors: color){
+            System.out.println(colors);
+        }
         ////11
 //        ArrayDeque<Integer> numbers=new ArrayDeque<>();
 //        numbers.add(23);
@@ -41,21 +41,21 @@ public class arrayDeque {
 //        System.out.println(numbers1);
 //        System.out.println(numbers1.peekFirst());
 //        System.out.println(numbers1);
-        //13
-        ArrayDeque<Integer> numbers2 = new ArrayDeque<>();
-        numbers2.add(23);
-        numbers2.add(15);
-        numbers2.add(46);
-        numbers2.add(52);
-        numbers2.add(87);
-        System.out.println(numbers2);
-        TreeSet<Integer> sortOfNumbers = new TreeSet<>();
-        sortOfNumbers.comparator(numbers2);
-        Iterator<Integer> iteratorNumbers = numbers2.iterator();
-        while (iteratorNumbers.hasNext()) {
-          System.out.println(iteratorNumbers.next());
-
-        }
+        ////13
+//        ArrayDeque<Integer> numbers2 = new ArrayDeque<>();
+//        numbers2.add(23);
+//        numbers2.add(15);
+//        numbers2.add(46);
+//        numbers2.add(52);
+//        numbers2.add(87);
+//        numbers2.toArray();
+//        System.out.println(numbers2);
+//        TreeSet<Integer> sortOfNumbers = new TreeSet<>();
+//        sortOfNumbers.addAll(numbers2);
+//
+//        for (int num : sortOfNumbers) {
+//            System.out.println(num);
+//        }
     }
 }
 
