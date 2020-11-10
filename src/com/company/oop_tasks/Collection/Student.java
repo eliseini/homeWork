@@ -3,27 +3,25 @@ package com.company.oop_tasks.Collection;
 import java.util.*;
 
 
-public class Student implements Comparable {
-    public static void main(String[] args) {
+public class Student implements Comparable<Student> {
+    private String name;
 
-
-        Set<String> student = new TreeSet<>();
-        student.add("Cat");
-        student.add("Dog");
-        student.add("Horse");
-        student.add("Cow");
-        student.add("Mouse");
-        student.add("Birds");
-        student.add("Wolf");
-        student.add("Tiger");
-        student.add("Elephant");
-        student.add("Fox");
-        System.out.println(student);
+    public Student(String name) {
+        this.name=name;
     }
 
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(Student o) {
+        int result = this.name.compareTo(o.name);
+
+
+        return result;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

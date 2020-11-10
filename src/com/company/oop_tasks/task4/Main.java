@@ -7,7 +7,7 @@ public class Main {
 
         System.out.println(reader);
         reader.takeBook();
-        reader.takeBook("");
+        reader.takeBook();
 
         Reader reader1 = new Reader();
 

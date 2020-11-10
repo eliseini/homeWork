@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Reader {
     String name;
     String surName;
-    int theNumberOfYourLibraryCard;
+    int numberOfLibraryCard;
     String faculty;
     String dateBirthday;
     String phoneNumbers;
@@ -13,7 +13,7 @@ public class Reader {
     public Reader(String name, String surName, int theNumberOfYourLibraryCard, String faculty, String dateBirthday, String phoneNumbers) {
         this.name = name;
         this.surName = surName;
-        this.theNumberOfYourLibraryCard = theNumberOfYourLibraryCard;
+        this.numberOfLibraryCard = theNumberOfYourLibraryCard;
         this.faculty = faculty;
         this.dateBirthday = dateBirthday;
         this.phoneNumbers = phoneNumbers;
@@ -21,23 +21,32 @@ public class Reader {
 
     public Reader() {
     }
+    public void takeBook(Scanner sc) {
 
+       while(true) {
+           sc = new Scanner(System.in);
+           String nameBook= sc.next();
+           if(!nameBook.equals("#stop")) {
+
+           }
+       }
+    }
     public void takeBook() {
         int takeBook = 3;
         System.out.println("\n" + name+" " +surName+ " взял " + takeBook + " книги");
     }
 
     public void takeBook(String str) {
-
-        String[] objArray = new String[3];
-        objArray[0] = new String("Приключения, ");
-        objArray[1] = new String("Словарь, ");
-        objArray[2] = new String("Энциклопедия");
-        System.out.print("\n" + name+" " +surName+ " взял кнги: ");
-        for (int i = 0; i < 3; i++) {
-
-            System.out.print(objArray[i]);
-        }
+       // int index=sc.nextInt();
+        //String[] objArray = new String[index];
+//        objArray[0] = new String("Приключения, ");
+//        objArray[1] = new String("Словарь, ");
+//        objArray[2] = new String("Энциклопедия");
+//        System.out.print("\n" + name+" " +surName+ " взял кнги: ");
+//        for (int i = 0; i < 3; i++) {
+//
+//            System.out.print(objArray[i]);
+//        }
 
     }
 
@@ -64,7 +73,7 @@ public class Reader {
             return
                     "\n{name = '" + name + '\'' +
                     ", surName = '" + surName + '\'' +
-                    ", theNumberOfYourLibraryCard = " + theNumberOfYourLibraryCard +
+                    ", numberOfLibraryCard = " + numberOfLibraryCard +
                     ", faculty = '" + faculty + '\'' +
                     ", dateBirthday = " + dateBirthday +
                     ", phoneNumbers = " + phoneNumbers+"}";
