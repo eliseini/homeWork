@@ -25,6 +25,9 @@ try {
 
                 System.out.println("Вы ввели неверный формат для int");
         }
+catch (ArrayIndexOutOfBoundsException e){
+    System.out.println("Вы вышли за предел размера массива");
+}
 
 
     }
