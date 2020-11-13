@@ -10,7 +10,7 @@ public class Warrior {
         this.hitPoint = hitPoint;
     }
 
-    public static void unit(int warrior) {
+    public static void unit() {
         Warrior unit1 = new Warrior( 100);
         Warrior unit2 = new Warrior(100);
 
