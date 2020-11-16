@@ -48,19 +48,27 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-//#2 не получилось посчитать символы и слова
+//#2 Работает не верно
 //        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("src\\com\\company\\oop_tasks\\file\\Text2.txt"))) {
 //            int lines = 0;
-//            while (bufferedReader.lines() != null) {
-//                lines++;
-//                System.out.println(lines + " - " + bufferedReader.readLine());
+//            String line=bufferedReader.readLine();
+//            int blockCount=bufferedReader.readLine().split(" ").length;
+//            while (true) {
+//                if (bufferedReader.readLine() != null){
+//                    lines++;
 //
-//                break;
+//                    System.out.println(lines + " - " + line.length() + " - " + blockCount);
+//
+//
+//                }else {
+//                    break;
+//                }
 //            }
+//
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-//#3
+////#3
 //        try(FileWriter fileWriter=new FileWriter("src\\com\\company\\oop_tasks\\file\\Text1.txt")){
 //
 //            int sum=0;
@@ -114,6 +122,7 @@ public class Main {
 //            e.printStackTrace();
 //        }
 //#6
+
 
     }
 }
