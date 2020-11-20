@@ -2,11 +2,10 @@ package com.company.oop_tasks.file;
 
 
 import java.io.*;
-import java.nio.CharBuffer;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 ////ClassWork
 
 //try (FileReader fileReader=new FileReader("src\\com\\company\\oop_tasks\\file\\Text1.text");
@@ -49,27 +48,22 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-//#2 Работает не верно
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("src\\com\\company\\oop_tasks\\file\\Text2.txt"))) {
-            int lines = 0;
-            String line=bufferedReader.readLine();
-            int blockCount=bufferedReader.readLine().split(" ").length;
-            while (bufferedReader.readLine() != null) {
-                if (bufferedReader.readLine() != null) {
-                    lines++;
-
-                    System.out.println(lines + " - " + line.length() + " - " + blockCount);
-                }else {
-                    break;
-                }
-
-
-
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//#2
+//        ArrayList<Line> lines = new ArrayList<>();
+//        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("src\\com\\company\\oop_tasks\\file\\Text2.txt"))) {
+//            String line = bufferedReader.readLine();
+//            while (line != null) {
+//                Line currentLine = new Line(line);
+//                lines.add(currentLine);
+//                System.out.println("Символов: " + currentLine.getSymbolAmount() + " -- слов: " + currentLine.getWordsAmount());
+//                line = bufferedReader.readLine();
+//            }
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        System.out.println("Общее количество строк = " + lines.size());
 ////#3
 //        try(FileWriter fileWriter=new FileWriter("src\\com\\company\\oop_tasks\\file\\Text1.txt")){
 //
@@ -108,6 +102,41 @@ public class Main {
 //            } catch (IOException ioException) {
 //            ioException.printStackTrace();
 //        }
+//        try (FileWriter fileWriter = new FileWriter("src\\com\\company\\oop_tasks\\file\\Text3.txt")){
+//        Scanner scanner = new Scanner(System.in);
+//        String str = scanner.nextLine();
+//        while (!str.isEmpty()) {
+//            fileWriter.write(str + "\n");
+//            str = scanner.nextLine();
+//        }
+//    } catch (IOException e) {
+//        e.printStackTrace();
+//    }
+//
+//        try (
+//    FileReader fileReader = new FileReader("src\\com\\company\\oop_tasks\\file\\Text3.txt");
+//    BufferedReader bufferedReader = new BufferedReader(fileReader);
+//    FileWriter fileWriter = new FileWriter("src\\com\\company\\oop_tasks\\file\\Text2.txt")
+//        ) {
+//        String line = "";
+//        while (line != null) {
+//            if (isStartFromA(line)) {
+//                fileWriter.write(line + "\n");
+//            }
+//            line = bufferedReader.readLine();
+//        }
+//
+//    } catch (FileNotFoundException e) {
+//        e.printStackTrace();
+//    } catch (IOException e) {
+//        e.printStackTrace();
+//    }
+//}
+//
+//    private static boolean isStartFromA(String s) {
+//        return s.startsWith("a") || s.startsWith("A");
+//    }
+
 
 //#5
 //        try(FileReader fileReader = new  FileReader("src\\com\\company\\oop_tasks\\file\\Text1.txt");
@@ -125,10 +154,36 @@ public class Main {
 //            e.printStackTrace();
 //        }
 //#6
+        try (
+                FileReader fileReader = new FileReader("src\\com\\company\\oop_tasks\\file\\Text3.txt");
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+                FileWriter fileWriter = new FileWriter("src\\com\\company\\oop_tasks\\file\\Text2.txt")
+        ) {
+            String line = bufferedReader.readLine();
+            while (line != null) {
+                String[] nums = line.split(",");
+                fileWriter.write(String.valueOf(getBiggerNum(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]))) + "\n");
+                line = bufferedReader.readLine();
+            }
 
-
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
     }
-}
+
+    private static int getBiggerNum(int first, int second) {
+        if(first >= second) {
+            return first;
+        } else {
+            return second;
+        }
+    }
+    }
+
 
 
 
